@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="ja" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-ja="ZELOS | スポーツマネジメント" data-en="ZELOS | Sports Management">ZELOS | スポーツマネジメント</title>
+<meta name="description" content="一般社団法人ZELOS公式サイト。スポーツマネジメント、海外挑戦サポート、発展途上国支援など、スポーツに関わるすべての人に最適なソリューションを提供します。">
+<meta property="og:title" content="ZELOS | Sports Management">
+<meta property="og:description" content="選手の可能性を最大限に引き出し、世界への扉を開く。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zelos2026.github.io/zelos-website/">
+<meta property="og:image" content="images/logo.png">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  /* Primary green palette — elegant & gentle */
+  --green: #2d5f3f;           /* main deep green (forest) */
+  --green-dark: #1f4430;      /* darker accent */
+  --green-light: #6b9b7a;     /* sage green for accents */
+  --green-pale: #e8f0ea;      /* very pale green for soft bg */
+  --accent: #a8b89b;          /* warm sage for subtle highlights */
+  --accent-deep: #7a8f6a;     /* darker sage for text accents */
+  --cream: #faf9f5;           /* warm off-white for sections */
+  --warm: #d4c596;            /* warm sand/ivory for highlights on dark bg */
+  --warm-deep: #b8a572;       /* deeper warm for light-bg accents */
+
+  /* Supporting neutrals */
+  --white: #ffffff;
+  --bg: #ffffff;              /* page background is pure white */
+  --bg-soft: #f7f9f6;         /* very soft section bg */
+  --line: #e4e8e0;            /* soft green-tinted border */
+  --sub: #6b7265;             /* muted greenish grey text */
+  --ink: #1f2921;             /* deep green-black for body text */
+
+  /* Legacy variable aliases (kept so the rest of the CSS keeps working) */
+  --navy: var(--green);
+  --navy-dark: var(--green-dark);
+  --navy-light: var(--green-light);
+  --gold: var(--accent-deep);      /* sage green — readable on both light & dark */
+  --gold-deep: var(--accent-deep);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; height: auto; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.page { display: none; }
+.page.active { display: block; }
+
+/* ========================= TOPBAR ========================= */
+.topbar {
+  background: var(--navy-dark);
+  color: #fff;
+  font-size: 11px;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  letter-spacing: 0.08em;
+}
+.topbar .left {
+  color: var(--warm);
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.2em;
+}
+.topbar .social {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.topbar a {
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+.topbar a:hover { opacity: 1; color: var(--warm); }
+
+/* ========================= HEADER ========================= */
+header.main {
+  background: #fff;
+  border-bottom: 3px solid var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(45, 95, 63, 0.08);
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+.logo-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.14em;
+  color: var(--navy);
+  line-height: 1;
+}
+.logo-text span {
+  display: block;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--sub);
+  margin-top: 5px;
+  font-weight: 500;
+}
+.header-cta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.cta-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 18px;
+  background: var(--navy);
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.cta-btn:hover { background: var(--green-light); color: #fff; }
+.cta-btn.gold { background: var(--green-light); color: #fff; }
+.cta-btn.gold:hover { background: var(--green); color: #fff; }
+
+nav.main-nav {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+nav.main-nav ul {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 0;
+  list-style: none;
+  overflow-x: auto;
+}
+nav.main-nav li a {
+  display: block;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+nav.main-nav li a:hover,
+nav.main-nav li a.active {
+  background: #f9fafc;
+  border-bottom-color: var(--gold);
+}
+nav.main-nav li.lang { margin-left: auto; }
+nav.main-nav li.lang a {
+  color: var(--sub);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+}
+
+/* ========================= HERO ========================= */
+.hero-slider {
+  position: relative;
+  background: linear-gradient(135deg, var(--green-dark), var(--green) 60%, var(--green-light));
+  overflow: hidden;
+}
+.hero-slide {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 100px 24px 120px;
+  color: #fff;
+  position: relative;
+}
+.hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(232, 240, 234, 0.18), transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05), transparent 55%);
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 2; }
+.hero-kicker {
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--warm);
+  letter-spacing: 0.3em;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+.hero h1 em {
+  color: var(--warm);
+  font-style: normal;
+}
+.hero-subtitle {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 28px;
+}
+.hero-description {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--warm);
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #fff; color: var(--green-dark); }
+.btn-outline {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-outline:hover { background: #fff; color: var(--navy); }
+
+.hero-tagline {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: clamp(20px, 2.6vw, 30px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  max-width: 720px;
+}
+@media (max-width: 600px) {
+  .hero-tagline {
+    margin-top: 36px;
+    padding-top: 24px;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* ========================= SECTION TITLE ========================= */
+.section-title {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px 24px 32px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--navy);
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 24px;
+  width: 80px;
+  height: 2px;
+  background: var(--gold);
+}
+.section-title h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+}
+.section-title .ja {
+  font-size: 13px;
+  color: var(--sub);
+  margin-left: 16px;
+  font-weight: 500;
+}
+.section-title .more {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--sub);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.section-title .more:hover { color: var(--gold-deep); }
+
+/* ========================= STATS BAR ========================= */
+.stats-bar {
+  background: var(--navy-dark);
+  color: #fff;
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0;
+}
+.stat-item {
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--warm);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2px;
+}
+.stat-ja { font-size: 10px; color: rgba(255,255,255,0.5); }
+
+/* ========================= VALUES (Home) ========================= */
+.values-section { max-width: 1280px; margin: 0 auto; padding: 32px 24px 64px; }
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.value-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 28px 24px;
+  position: relative;
+  transition: all 0.3s;
+  border-top: 3px solid var(--gold);
+}
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(45, 95, 63, 0.12);
+}
+.value-card .label {
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--gold-deep);
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+.value-card h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+.value-card p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+/* ========================= SERVICES (cards) ========================= */
+.services-wrap { background: var(--bg-soft); padding: 16px 0 80px; }
+.services-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.service-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 28px 24px 24px;
+  transition: all 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.service-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(45, 95, 63, 0.1);
+}
+.service-card .num {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: rgba(45, 95, 63, 0.08);
+  line-height: 1;
+  position: absolute;
+  top: 18px;
+  right: 22px;
+}
+.service-card .kicker {
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--gold-deep);
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+.service-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.service-card p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--ink);
+  margin-bottom: 18px;
+  flex: 1;
+}
+.service-card .cta {
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--navy);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 3px;
+  display: inline-block;
+  align-self: flex-start;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.service-card .cta:hover { color: var(--gold-deep); }
+.service-card ul.sub-list {
+  list-style: none;
+  padding: 0;
+  margin: -6px 0 18px;
+}
+.service-card ul.sub-list li {
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--ink);
+  padding: 6px 0 6px 18px;
+  position: relative;
+  border-bottom: 1px dashed var(--line);
+}
+.service-card ul.sub-list li:last-child { border-bottom: none; }
+.service-card ul.sub-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 10px;
+  height: 2px;
+  background: var(--accent-deep);
+}
+
+/* ========================= NEWS / EVENT LIST ========================= */
+.events-wrap { background: var(--bg-soft); padding: 16px 0 80px; }
+.events-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.event-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 24px;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+.event-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(45, 95, 63, 0.12);
+}
+.event-date-block {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.event-date-day {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+.event-date-month {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  color: var(--gold-deep);
+}
+.event-date-year {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  color: var(--sub);
+  margin-left: auto;
+}
+.event-date-block.tbd .event-date-day {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  color: var(--gold-deep);
+  opacity: 0.7;
+}
+.event-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 14px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  background: var(--navy);
+  color: #fff;
+}
+.event-status.ended { background: #888; }
+.event-status.upcoming { background: var(--green-light); color: #fff; }
+.event-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.event-card p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink);
+  margin-bottom: 16px;
+  flex: 1;
+}
+.event-meta {
+  font-size: 12px;
+  color: var(--ink);
+  letter-spacing: 0.03em;
+  line-height: 1.8;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.event-meta span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.event-meta .m-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 10px;
+  color: var(--accent-deep);
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+
+/* ========================= STORY ========================= */
+.story {
+  background: var(--navy);
+  color: #fff;
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.story::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(212, 197, 150, 0.10), transparent 55%),
+    radial-gradient(circle at 10% 80%, rgba(107, 155, 122, 0.18), transparent 55%);
+  pointer-events: none;
+}
+.story-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+.story-kicker {
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--warm);
+  letter-spacing: 0.3em;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.story h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.story h2 em { color: var(--warm); font-style: normal; }
+.story p {
+  font-size: 15px;
+  line-height: 2;
+  color: rgba(255,255,255,0.88);
+  max-width: 680px;
+  margin-bottom: 16px;
+}
+.story-link {
+  display: inline-block;
+  margin-top: 24px;
+  padding-bottom: 4px;
+  color: var(--warm);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  border-bottom: 1px solid var(--warm);
+  cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* ========================= PICK UP ========================= */
+.pickup-section { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
+.pickup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+.pickup-card {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  overflow: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.pickup-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(212, 197, 150, 0.18), transparent 70%);
+  transition: opacity 0.3s;
+}
+.pickup-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(31, 68, 48, 0.25); }
+.pickup-card .label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 11px;
+  color: var(--warm);
+  letter-spacing: 0.3em;
+  margin-bottom: 6px;
+  position: relative;
+  z-index: 2;
+}
+.pickup-card .title { font-size: 15px; font-weight: 700; position: relative; z-index: 2; line-height: 1.5; }
+
+/* ========================= PROFILE (Representative) ========================= */
+.profile-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+.profile-heading {
+  text-align: center;
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid var(--navy);
+  position: relative;
+}
+.profile-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: var(--gold);
+}
+.profile-heading .kicker {
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--gold-deep);
+  letter-spacing: 0.3em;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.profile-heading h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 42px;
+  color: var(--navy);
+}
+.profile-heading .note {
+  font-size: 13px;
+  color: var(--sub);
+  margin-top: 12px;
+}
+.profile-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+.profile-photo-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  background: var(--bg-soft);
+  border-top: 4px solid var(--gold);
+  overflow: hidden;
+}
+.profile-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+.profile-main .name {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.profile-main .name-en {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  color: var(--sub);
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+.profile-main .role {
+  display: inline-block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 12px;
+  padding: 5px 14px;
+  background: var(--green);
+  color: var(--warm);
+  letter-spacing: 0.2em;
+  margin-bottom: 24px;
+}
+.profile-main p {
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.profile-locale {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.profile-locale-item .label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 10px;
+  color: var(--gold-deep);
+  letter-spacing: 0.2em;
+  margin-bottom: 2px;
+}
+.profile-locale-item .val {
+  font-size: 13px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.career-section {
+  margin-top: 48px;
+}
+.career-heading {
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-left: 14px;
+  border-left: 4px solid var(--gold);
+  letter-spacing: 0.02em;
+}
+.career-list {
+  list-style: none;
+  padding: 0;
+}
+.career-list li {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.career-list li .year {
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gold-deep);
+  letter-spacing: 0.05em;
+}
+.career-list li .year.dash {
+  color: var(--sub);
+  opacity: 0.5;
+}
+.career-list li .txt {
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.7;
+}
+.player-career-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 8px;
+}
+.player-career-list li {
+  font-size: 13px;
+  padding: 10px 14px;
+  background: var(--bg-soft);
+  border-left: 3px solid var(--gold);
+  line-height: 1.6;
+}
+
+/* ========================= ACHIEVEMENTS ========================= */
+.achievements-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.achievement-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  padding: 24px;
+  transition: all 0.3s;
+}
+.achievement-card:hover {
+  box-shadow: 0 8px 20px rgba(45, 95, 63, 0.1);
+  transform: translateY(-3px);
+}
+.achievement-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.achievement-card p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--ink);
+}
+.achievement-note {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 13px;
+  color: var(--sub);
+}
+
+/* ========================= SOCIAL CONTRIBUTION PAGE ========================= */
+.social-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+.social-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--ink);
+}
+.social-article {
+  background: #fff;
+  border: 1px solid var(--line);
+  margin-bottom: 56px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(45, 95, 63, 0.05);
+}
+.social-article-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-soft);
+  overflow: hidden;
+  position: relative;
+}
+.social-article-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.social-article-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--green);
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  padding: 6px 14px;
+  z-index: 2;
+}
+.social-article-body {
+  padding: 36px 40px 40px;
+}
+.social-article-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--sub);
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.social-article-meta .meta-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.social-article-meta .m-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 10px;
+  color: var(--accent-deep);
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+.social-article-meta .m-value {
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.social-article h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.social-article p {
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.social-article p:last-child { margin-bottom: 0; }
+.social-article-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.social-article-gallery .g-item {
+  aspect-ratio: 4 / 3;
+  background: var(--bg-soft);
+  overflow: hidden;
+}
+.social-article-gallery .g-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.social-article-partner {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: var(--bg-soft);
+  border-left: 3px solid var(--accent-deep);
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1.8;
+}
+.social-article-partner .p-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 10px;
+  color: var(--accent-deep);
+  letter-spacing: 0.25em;
+  display: block;
+  margin-bottom: 4px;
+}
+.social-article-links {
+  margin-top: 20px;
+  padding: 16px 18px;
+  background: var(--bg-soft);
+  border-left: 3px solid var(--green-light);
+}
+.social-article-links .l-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 10px;
+  color: var(--accent-deep);
+  letter-spacing: 0.25em;
+  display: block;
+  margin-bottom: 10px;
+}
+.social-article-links ul {
+  list-style: none;
+  padding: 0;
+}
+.social-article-links li {
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.social-article-links li:last-child { border-bottom: none; }
+.social-article-links li a {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  word-break: break-all;
+}
+.social-article-links li a::before {
+  content: "↗";
+  color: var(--accent-deep);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.social-article-links li a:hover {
+  color: var(--green-light);
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  .social-article-body { padding: 24px 20px 28px; }
+  .social-article-cover { aspect-ratio: 3 / 2; }
+  .social-article-badge { top: 12px; left: 12px; font-size: 10px; padding: 4px 10px; }
+  .social-article-gallery { grid-template-columns: 1fr; }
+}
+
+/* ========================= ABOUT PAGE ========================= */
+.about-inner { max-width: 900px; margin: 0 auto; padding: 56px 24px 80px; }
+.about-section { margin-bottom: 48px; }
+.about-section h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  color: var(--navy);
+  margin-bottom: 16px;
+  padding-left: 14px;
+  border-left: 4px solid var(--gold);
+  letter-spacing: 0.02em;
+}
+.about-section p {
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.about-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+.about-table th, .about-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.about-table th {
+  background: var(--bg-soft);
+  color: var(--navy);
+  font-weight: 700;
+  width: 30%;
+}
+
+/* ========================= GENERIC PAGE INNER ========================= */
+.generic-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+.generic-inner > h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  color: var(--navy);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.generic-inner > .lead {
+  font-size: 14px;
+  color: var(--sub);
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--gold);
+}
+
+/* ========================= CONTACT ========================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 48px;
+  margin-top: 24px;
+}
+.contact-info h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 3px solid var(--gold);
+}
+.contact-info p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.contact-item {
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  background: var(--bg-soft);
+  border-left: 3px solid var(--gold);
+}
+.contact-item .label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 10px;
+  color: var(--gold-deep);
+  letter-spacing: 0.25em;
+  margin-bottom: 4px;
+}
+.contact-item .val {
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+  word-break: break-all;
+}
+.contact-item .val a:hover { color: var(--gold-deep); }
+.contact-form {
+  display: grid;
+  gap: 14px;
+}
+.contact-form label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 4px;
+}
+.contact-form label .req {
+  color: var(--gold-deep);
+  font-size: 11px;
+  margin-left: 4px;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.contact-form textarea { min-height: 140px; resize: vertical; }
+.contact-form button {
+  padding: 16px;
+  background: var(--navy);
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+  border: none;
+}
+.contact-form button:hover { background: var(--green-light); color: #fff; }
+
+/* ========================= FOOTER ========================= */
+footer {
+  background: var(--green-dark);
+  color: #fff;
+  padding: 64px 24px 32px;
+  border-top: 4px solid var(--warm);
+}
+.footer-inner { max-width: 1280px; margin: 0 auto; }
+.footer-top {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 40px;
+  align-items: start;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-brand .name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  letter-spacing: 0.14em;
+  color: var(--warm);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.footer-brand .sub { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 0.25em; margin-top: 4px; }
+.footer-brand .addr { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 12px; line-height: 1.7; }
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+.footer-links h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 12px;
+  color: var(--warm);
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+.footer-links ul { list-style: none; }
+.footer-links li {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 8px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.footer-links li:hover { color: var(--warm); }
+.footer-social { display: flex; flex-direction: column; gap: 8px; }
+.footer-social a { font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; }
+.footer-social a:hover { color: var(--warm); }
+.footer-bottom {
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.08em;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ========================= FADE IN ========================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ========================= RESPONSIVE ========================= */
+@media (max-width: 900px) {
+  .topbar { padding: 6px 16px; font-size: 10px; }
+  .topbar .left { display: none; }
+  .hero-slide { padding: 60px 24px 80px; }
+  .hero h1 { font-size: 40px; }
+  nav.main-nav ul { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  nav.main-nav li a { padding: 12px 14px; font-size: 12px; white-space: nowrap; }
+  nav.main-nav li.lang { margin-left: 0; }
+  .section-title { padding: 40px 24px 24px; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .section-title h2 { font-size: 28px; }
+  .section-title .ja { margin-left: 0; }
+  .footer-top { grid-template-columns: 1fr; }
+  .header-cta .cta-btn { padding: 8px 10px; font-size: 10px; }
+  .logo-text { font-size: 18px; }
+  .logo-img { width: 42px; height: 42px; }
+  .profile-card { grid-template-columns: 1fr; gap: 24px; }
+  .profile-photo-wrap { aspect-ratio: 1/1; max-width: 280px; margin: 0 auto; }
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 600px) {
+  .pickup-grid { grid-template-columns: 1fr 1fr; }
+  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; margin-bottom: 20px; }
+  .stat-item:last-child { border-bottom: none; }
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+  .header-cta .cta-btn:nth-child(2) { display: none; }
+  .career-list li { grid-template-columns: 70px 1fr; gap: 10px; }
+  .profile-main .name { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== TOPBAR ==================== -->
+<div class="topbar">
+  <span class="left">ZELOS / SPORTS MANAGEMENT / SINCE 2022 — TOKYO × SOUTHEAST ASIA</span>
+  <div class="social">
+    <a href="mailto:zelos.sm@gmail.com">Email</a>
+    <a href="#" target="_blank" rel="noopener">Instagram</a>
+    <a href="#" target="_blank" rel="noopener">X</a>
+  </div>
+</div>
+
+<!-- ==================== HEADER ==================== -->
+<header class="main">
+  <div class="header-inner">
+    <a class="logo" onclick="showPage('home')">
+      <img class="logo-img" src="images/logo.png" alt="ZELOS">
+      <div class="logo-text">
+        ZELOS
+        <span data-ja="スポーツマネジメント" data-en="SPORTS MANAGEMENT">スポーツマネジメント</span>
+      </div>
+    </a>
+    <div class="header-cta">
+      <a class="cta-btn" onclick="showPage('contact')" data-ja="CONTACT" data-en="CONTACT">CONTACT</a>
+      <a class="cta-btn" onclick="showPage('events')" data-ja="EVENTS" data-en="EVENTS">EVENTS</a>
+      <a class="cta-btn gold" onclick="showPage('services')" data-ja="SERVICES" data-en="SERVICES">SERVICES</a>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== MAIN NAV ==================== -->
+<nav class="main-nav">
+  <ul>
+    <li><a class="active" onclick="showPage('home')" data-ja="HOME" data-en="HOME">HOME</a></li>
+    <li><a onclick="showPage('about')" data-ja="ABOUT" data-en="ABOUT">ABOUT</a></li>
+    <li><a onclick="showPage('profile')" data-ja="PROFILE" data-en="PROFILE">PROFILE</a></li>
+    <li><a onclick="showPage('services')" data-ja="SERVICES" data-en="SERVICES">SERVICES</a></li>
+    <li><a onclick="showPage('events')" data-ja="EVENTS" data-en="EVENTS">EVENTS</a></li>
+    <li><a onclick="showPage('achievements')" data-ja="ACHIEVEMENTS" data-en="ACHIEVEMENTS">ACHIEVEMENTS</a></li>
+    <li><a onclick="showPage('social')" data-ja="SOCIAL" data-en="SOCIAL">SOCIAL</a></li>
+    <li><a onclick="showPage('contact')" data-ja="CONTACT" data-en="CONTACT">CONTACT</a></li>
+    <li class="lang"><a id="langToggle" onclick="toggleLang()" data-ja="ENGLISH" data-en="日本語">ENGLISH</a></li>
+  </ul>
+</nav>
+
+<!-- ==================== HOME PAGE ==================== -->
+<div class="page active" id="page-home">
+
+<!-- HERO -->
+<section class="hero-slider">
+  <div class="hero-slide">
+    <div class="hero-content">
+      <div class="hero-kicker" data-ja="SINCE 2022 — TOKYO / SOUTHEAST ASIA" data-en="SINCE 2022 — TOKYO / SOUTHEAST ASIA">SINCE 2022 — TOKYO / SOUTHEAST ASIA</div>
+      <h1 class="hero-h1" data-ja="UNLOCK YOUR<br><em>POTENTIAL</em>.<br>OPEN THE WORLD." data-en="UNLOCK YOUR<br><em>POTENTIAL</em>.<br>OPEN THE WORLD.">UNLOCK YOUR<br><em>POTENTIAL</em>.<br>OPEN THE WORLD.</h1>
+      <div class="hero-subtitle" data-ja="選手の可能性を最大限に引き出し、世界への扉を開く。" data-en="Maximize player potential. Open doors to the world.">選手の可能性を最大限に引き出し、世界への扉を開く。</div>
+      <p class="hero-description" data-ja="ZELOSはギリシャ語で「熱意・情熱」を意味する言葉。スポーツに対する情熱を原動力に、選手一人ひとりの夢と向き合い、国内外のフィールドへ挑戦するキャリアをトータルにサポートします。" data-en="ZELOS is a Greek word meaning &quot;passion&quot;. Driven by our passion for sport, we partner with each athlete to support their career from day one — domestically and across the world.">
+        ZELOSはギリシャ語で「熱意・情熱」を意味する言葉。
+        スポーツに対する情熱を原動力に、選手一人ひとりの夢と向き合い、
+        国内外のフィールドへ挑戦するキャリアをトータルにサポートします。
+      </p>
+      <div class="hero-buttons">
+        <a class="btn-primary" onclick="showPage('services')" data-ja="サービス一覧" data-en="OUR SERVICES">サービス一覧</a>
+        <a class="btn-outline" onclick="showPage('contact')" data-ja="お問い合わせ" data-en="CONTACT US">お問い合わせ</a>
+      </div>
+      <div class="hero-tagline" data-ja="スポーツを通して誰しもが挑戦できる社会へ" data-en="Building a society where anyone can take on a challenge through sport.">スポーツを通して誰しもが挑戦できる社会へ</div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<div class="section-title">
+  <div>
+    <h2>OUR VALUES</h2>
+    <span class="ja" data-ja="私たちが大切にする4つの価値" data-en="Four Core Values">私たちが大切にする4つの価値</span>
+  </div>
+</div>
+<div class="values-section">
+  <div class="values-grid">
+    <div class="value-card fade-in">
+      <div class="label">01</div>
+      <h3>GLOBAL</h3>
+      <p data-ja="日本と東南アジアを繋ぐグローバルなネットワーク。選手のキャリアを世界規模で描きます。" data-en="A global network bridging Japan and Southeast Asia. We design careers on a worldwide scale.">日本と東南アジアを繋ぐグローバルなネットワーク。選手のキャリアを世界規模で描きます。</p>
+    </div>
+    <div class="value-card fade-in">
+      <div class="label">02</div>
+      <h3>TRUST</h3>
+      <p data-ja="選手との深い信頼関係が、すべての起点。誠実に向き合い、長期的なパートナーであり続けます。" data-en="Deep trust with each athlete is our starting point. We commit to being a sincere, long-term partner.">選手との深い信頼関係が、すべての起点。誠実に向き合い、長期的なパートナーであり続けます。</p>
+    </div>
+    <div class="value-card fade-in">
+      <div class="label">03</div>
+      <h3>GROWTH</h3>
+      <p data-ja="現役中の活躍はもちろん、引退後を見据えた継続的な成長支援を行います。" data-en="We support continuous growth — not only during active careers, but with an eye on life after playing.">現役中の活躍はもちろん、引退後を見据えた継続的な成長支援を行います。</p>
+    </div>
+    <div class="value-card fade-in">
+      <div class="label">04</div>
+      <h3>PASSION</h3>
+      <p data-ja="ZELOS＝情熱。私たちはスポーツへの純粋な情熱をもって、マネジメントに取り組みます。" data-en="ZELOS means passion. We approach management with pure, genuine love for sport.">ZELOS＝情熱。私たちはスポーツへの純粋な情熱をもって、マネジメントに取り組みます。</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section-title">
+  <div>
+    <h2>SERVICES</h2>
+    <span class="ja" data-ja="事業内容" data-en="What We Do">事業内容</span>
+  </div>
+  <a class="more" onclick="showPage('services')" data-ja="ALL SERVICES →" data-en="ALL SERVICES →">ALL SERVICES →</a>
+</div>
+<div class="services-wrap">
+  <div class="services-inner">
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="num">01</div>
+        <div class="kicker">MANAGEMENT</div>
+        <h3 data-ja="選手マネジメント" data-en="Player Management">選手マネジメント</h3>
+        <p data-ja="選手のキャリア設計から契約交渉、日常のサポートまで。一人ひとりに合わせた最適なプランを提供します。" data-en="From career design and contract negotiation to day-to-day support — customized plans for every athlete.">選手のキャリア設計から契約交渉、日常のサポートまで。一人ひとりに合わせた最適なプランを提供します。</p>
+        <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+      </div>
+      <div class="service-card fade-in">
+        <div class="num">02</div>
+        <div class="kicker">OVERSEAS</div>
+        <h3 data-ja="海外挑戦サポート" data-en="Overseas Challenge">海外挑戦サポート</h3>
+        <p data-ja="海外クラブとのネットワークを活かし、トライアウトの機会創出や移籍交渉を支援します。" data-en="Leveraging our overseas club network to create tryout opportunities and negotiate transfers.">海外クラブとのネットワークを活かし、トライアウトの機会創出や移籍交渉を支援します。</p>
+        <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+      </div>
+      <div class="service-card fade-in">
+        <div class="num">03</div>
+        <div class="kicker">SPONSORSHIP</div>
+        <h3 data-ja="スポンサーシップ" data-en="Sponsorship">スポンサーシップ</h3>
+        <p data-ja="選手とスポンサー企業のマッチングを行い、双方にとって価値あるパートナーシップを構築します。" data-en="Matching athletes with sponsors to build partnerships that create mutual value.">選手とスポンサー企業のマッチングを行い、双方にとって価値あるパートナーシップを構築します。</p>
+        <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+      </div>
+      <div class="service-card fade-in">
+        <div class="num">04</div>
+        <div class="kicker">EVENTS</div>
+        <h3 data-ja="イベント企画・運営" data-en="Event Planning & Operations">イベント企画・運営</h3>
+        <p data-ja="トライアウトやスポーツキャンプなど、選手の成長につながるイベントを企画・運営します。" data-en="Planning and operating tryouts, sports camps, and events that drive player growth.">トライアウトやスポーツキャンプなど、選手の成長につながるイベントを企画・運営します。</p>
+        <a class="cta" onclick="showPage('events')">EVENTS →</a>
+      </div>
+      <div class="service-card fade-in">
+        <div class="num">05</div>
+        <div class="kicker">EDUCATION</div>
+        <h3 data-ja="キャリア教育" data-en="Career Education">キャリア教育</h3>
+        <p data-ja="セカンドキャリアを見据えた教育プログラムや、若手選手向けのメンタリングを提供します。" data-en="Education programs and mentoring for young players, with an eye on second careers.">セカンドキャリアを見据えた教育プログラムや、若手選手向けのメンタリングを提供します。</p>
+        <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+      </div>
+      <div class="service-card fade-in">
+        <div class="num">06</div>
+        <div class="kicker">CONSULTING</div>
+        <h3 data-ja="コンサルティング" data-en="Consulting">コンサルティング</h3>
+        <p data-ja="クラブや企業向けに、スポーツビジネスに関する戦略立案やアドバイザリーサービスを提供します。" data-en="Strategic planning and advisory services on sports business, for clubs and companies.">クラブや企業向けに、スポーツビジネスに関する戦略立案やアドバイザリーサービスを提供します。</p>
+        <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+      </div>
+      <div class="service-card fade-in">
+        <div class="num">07</div>
+        <div class="kicker">SOCIAL CONTRIBUTION</div>
+        <h3 data-ja="発展途上国のスポーツ支援" data-en="Sports Support for Developing Nations">発展途上国のスポーツ支援</h3>
+        <p data-ja="スポーツを通じて子どもたちに夢と希望を届ける。現地のニーズに寄り添い、持続的な支援を行います。" data-en="Delivering dreams and hope to children through sport — with ongoing, locally-rooted support.">スポーツを通じて子どもたちに夢と希望を届ける。現地のニーズに寄り添い、持続的な支援を行います。</p>
+        <ul class="sub-list">
+          <li data-ja="シューズの寄贈" data-en="Donation of football shoes">シューズの寄贈</li>
+          <li data-ja="AED寄贈" data-en="Donation of AEDs">AED寄贈</li>
+          <li data-ja="サッカー教室開催" data-en="Football clinics">サッカー教室開催</li>
+        </ul>
+        <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<div class="section-title">
+  <div>
+    <h2>EVENTS</h2>
+    <span class="ja" data-ja="イベント情報" data-en="Upcoming & Past Events">イベント情報</span>
+  </div>
+  <a class="more" onclick="showPage('events')" data-ja="ALL EVENTS →" data-en="ALL EVENTS →">ALL EVENTS →</a>
+</div>
+<div class="events-wrap">
+  <div class="events-inner">
+    <div class="events-grid">
+      <a class="event-card fade-in" href="https://zelos2026.github.io/soccer-tryout-2026/" target="_blank" rel="noopener">
+        <span class="event-status ended">ENDED</span>
+        <div class="event-date-block">
+          <span class="event-date-day">03</span>
+          <span class="event-date-month">APR</span>
+          <span class="event-date-year">2026</span>
+        </div>
+        <h3 data-ja="海外サッカートライアウト 2026" data-en="Overseas Soccer Tryout 2026">海外サッカートライアウト 2026</h3>
+        <p data-ja="海外プロクラブのスカウトが直接選手を評価する、国際トライアウトイベント。詳細はこちら。" data-en="An international tryout event where overseas professional club scouts evaluate players directly.">海外プロクラブのスカウトが直接選手を評価する、国際トライアウトイベント。詳細はこちら。</p>
+        <div class="event-meta">
+          <span><span class="m-label">VENUE</span><span data-ja="東京都葛飾区" data-en="Katsushika, Tokyo">東京都葛飾区</span></span>
+          <span><span class="m-label">TARGET</span><span data-ja="18歳〜26歳" data-en="Ages 18–26">18歳〜26歳</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-inner fade-in">
+    <div class="story-kicker">OUR STORY</div>
+    <h2 data-ja="スポーツで、<br>人と世界を<em>つなぐ</em>。" data-en="Connect people and<br>the world through <em>sport</em>.">スポーツで、<br>人と世界を<em>つなぐ</em>。</h2>
+    <p data-ja="選手一人ひとりの夢と向き合い、キャリア設計から国際的な舞台への挑戦まで、トータルにサポート。スポーツの力で人々の可能性を広げ、社会に新たな価値を届けます。" data-en="We partner with each athlete and support everything — from career design to stepping onto international stages — expanding what's possible through sport and delivering new value to society.">
+      選手一人ひとりの夢と向き合い、キャリア設計から国際的な舞台への挑戦まで、トータルにサポート。スポーツの力で人々の可能性を広げ、社会に新たな価値を届けます。
+    </p>
+    <p data-ja="日本と世界をつなぐ架け橋として、選手・クラブ・スポンサーの三者がともに成長できるエコシステムの構築を目指しています。" data-en="As a bridge between Japan and the world, we aim to build an ecosystem where athletes, clubs, and sponsors grow together.">
+      日本と世界をつなぐ架け橋として、選手・クラブ・スポンサーの三者がともに成長できるエコシステムの構築を目指しています。
+    </p>
+    <a class="story-link" onclick="showPage('about')" data-ja="MORE ABOUT US →" data-en="MORE ABOUT US →">MORE ABOUT US →</a>
+  </div>
+</section>
+
+<!-- PICK UP -->
+<div class="section-title">
+  <div>
+    <h2>PICK UP</h2>
+    <span class="ja" data-ja="注目コンテンツ" data-en="Featured Content">注目コンテンツ</span>
+  </div>
+</div>
+<div class="pickup-section">
+  <div class="pickup-grid">
+    <a class="pickup-card fade-in" onclick="showPage('profile')"><div class="label">CEO</div><div class="title" data-ja="代表プロフィール" data-en="Representative Profile">代表プロフィール</div></a>
+    <a class="pickup-card fade-in" onclick="showPage('achievements')"><div class="label">CLUB</div><div class="title" data-ja="Savannakhet Zelos FC" data-en="Savannakhet Zelos FC">Savannakhet Zelos FC</div></a>
+    <a class="pickup-card fade-in" href="https://zelos2026.github.io/soccer-tryout-2026/" target="_blank" rel="noopener"><div class="label">TRYOUT</div><div class="title" data-ja="海外トライアウト" data-en="Overseas Tryout">海外トライアウト</div></a>
+    <a class="pickup-card fade-in" onclick="showPage('services')"><div class="label">SERVICES</div><div class="title" data-ja="事業内容" data-en="Our Services">事業内容</div></a>
+    <a class="pickup-card fade-in" onclick="showPage('social')"><div class="label">SOCIAL</div><div class="title" data-ja="社会貢献活動" data-en="Social Contribution">社会貢献活動</div></a>
+    <a class="pickup-card fade-in" onclick="showPage('contact')"><div class="label">CONTACT</div><div class="title" data-ja="お問い合わせ" data-en="Get in Touch">お問い合わせ</div></a>
+  </div>
+</div>
+
+</div><!-- end page-home -->
+
+<!-- ==================== ABOUT PAGE ==================== -->
+<div class="page" id="page-about">
+  <div class="about-inner">
+    <div class="profile-heading fade-in">
+      <div class="kicker">ABOUT US</div>
+      <h2>ZELOS</h2>
+      <div class="note" data-ja="ZELOSについて" data-en="About ZELOS">ZELOSについて</div>
+    </div>
+
+    <div class="about-section">
+      <h3>VISION</h3>
+      <p data-ja="スポーツを通じて人と世界をつなぎ、新しい価値を創造する。" data-en="Connecting people and the world through sport, creating new value.">スポーツを通じて人と世界をつなぎ、新しい価値を創造する。</p>
+      <p data-ja="ZELOSはギリシャ語で「熱意・情熱」を意味する言葉。私たちはその名の通り、スポーツに対する情熱を原動力に活動しています。" data-en="ZELOS is a Greek word meaning &quot;passion&quot;. Just as our name suggests, we are driven by our passion for sport.">ZELOSはギリシャ語で「熱意・情熱」を意味する言葉。私たちはその名の通り、スポーツに対する情熱を原動力に活動しています。</p>
+    </div>
+
+    <div class="about-section">
+      <h3>MISSION</h3>
+      <p data-ja="選手一人ひとりの夢と向き合い、キャリア設計から国際的な舞台への挑戦まで、トータルにサポート。スポーツの力で人々の可能性を広げ、社会に新たな価値を届けます。" data-en="We partner with each athlete and support everything — from career design to stepping onto international stages — expanding what's possible through sport.">選手一人ひとりの夢と向き合い、キャリア設計から国際的な舞台への挑戦まで、トータルにサポート。スポーツの力で人々の可能性を広げ、社会に新たな価値を届けます。</p>
+      <p data-ja="日本と世界をつなぐ架け橋として、選手・クラブ・スポンサーの三者がともに成長できるエコシステムの構築を目指しています。" data-en="As a bridge between Japan and the world, we aim to build an ecosystem where athletes, clubs, and sponsors grow together.">日本と世界をつなぐ架け橋として、選手・クラブ・スポンサーの三者がともに成長できるエコシステムの構築を目指しています。</p>
+    </div>
+
+    <div class="about-section">
+      <h3>COMPANY INFO</h3>
+      <table class="about-table">
+        <tr>
+          <th data-ja="法人名" data-en="Organization">法人名</th>
+          <td data-ja="一般社団法人ZELOS" data-en="ZELOS General Incorporated Association">一般社団法人ZELOS</td>
+        </tr>
+        <tr>
+          <th data-ja="設立" data-en="Founded">設立</th>
+          <td data-ja="2022年" data-en="2022">2022年</td>
+        </tr>
+        <tr>
+          <th data-ja="代表者" data-en="Representative">代表者</th>
+          <td data-ja="渡邉 卓矢（Takuya Watanabe）" data-en="Takuya Watanabe">渡邉 卓矢（Takuya Watanabe）</td>
+        </tr>
+        <tr>
+          <th data-ja="所在地" data-en="Address">所在地</th>
+          <td data-ja="東京都新宿区高田馬場4-40-18-801" data-en="4-40-18-801 Takadanobaba, Shinjuku-ku, Tokyo, Japan">東京都新宿区高田馬場4-40-18-801</td>
+        </tr>
+        <tr>
+          <th data-ja="事業内容" data-en="Business">事業内容</th>
+          <td data-ja="スポーツマネジメント / イベント企画・運営 / コンサルティング" data-en="Sports Management / Event Planning & Operations / Consulting">スポーツマネジメント / イベント企画・運営 / コンサルティング</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td><a href="mailto:zelos.sm@gmail.com" style="color:var(--navy-light);">zelos.sm@gmail.com</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div><!-- end page-about -->
+
+<!-- ==================== PROFILE PAGE (Representative) ==================== -->
+<div class="page" id="page-profile">
+  <div class="profile-inner">
+    <div class="profile-heading fade-in">
+      <div class="kicker">REPRESENTATIVE</div>
+      <h2>PROFILE</h2>
+      <div class="note" data-ja="代表プロフィール" data-en="CEO / Founder Profile">代表プロフィール</div>
+    </div>
+
+    <div class="profile-card fade-in">
+      <div class="profile-photo-wrap">
+        <img src="images/profile.jpg" alt="渡邉 卓矢" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=&quot;display:grid;place-items:center;height:100%;color:var(--sub);font-family:Bebas Neue,sans-serif;font-size:14px;letter-spacing:0.2em;&quot;>PHOTO</div>';">
+      </div>
+      <div class="profile-main">
+        <div class="name" data-ja="渡邉 卓矢" data-en="Takuya Watanabe">渡邉 卓矢</div>
+        <div class="name-en">TAKUYA WATANABE</div>
+        <div class="role">CEO / FOUNDER</div>
+        <p data-ja="スポーツ業界で培った経験とグローバルなネットワークを活かし、選手のキャリアを多角的にサポート。国内外のクラブや関係者との強いパイプを持ち、選手一人ひとりに寄り添ったマネジメントを実践しています。" data-en="Leveraging experience gained in the sports industry and a global network, I support athletes' careers from multiple angles. With strong ties to clubs and industry partners in Japan and abroad, I practice management that stays close to each individual athlete.">
+          スポーツ業界で培った経験とグローバルなネットワークを活かし、選手のキャリアを多角的にサポート。国内外のクラブや関係者との強いパイプを持ち、選手一人ひとりに寄り添ったマネジメントを実践しています。
+        </p>
+        <div class="profile-locale">
+          <div class="profile-locale-item">
+            <div class="label">BASE</div>
+            <div class="val" data-ja="東京都" data-en="Tokyo, Japan">東京都</div>
+          </div>
+          <div class="profile-locale-item">
+            <div class="label">NETWORK</div>
+            <div class="val" data-ja="日本 / ラオス / タイ" data-en="Japan / Laos / Thailand">日本 / ラオス / タイ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="career-section">
+      <h3 class="career-heading">CAREER</h3>
+      <ul class="career-list">
+        <li>
+          <span class="year">2022</span>
+          <span class="txt" data-ja="一般社団法人ZELOS設立" data-en="Founded ZELOS General Incorporated Association">一般社団法人ZELOS設立</span>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <span class="txt" data-ja="ラオス1部リーグ サラワンユナイテッド創設" data-en="Founded Salavan United, Lao Premier League">ラオス1部リーグ サラワンユナイテッド創設</span>
+        </li>
+        <li>
+          <span class="year">2026</span>
+          <span class="txt" data-ja="株式会社ZELOS設立" data-en="Founded ZELOS Inc.">株式会社ZELOS設立</span>
+        </li>
+        <li>
+          <span class="year">2026</span>
+          <span class="txt" data-ja="ラオス1部リーグ サバナケットFCの運営権60%を獲得し、オーナーに就任" data-en="Acquired 60% of the operating rights of Savannakhet FC (Lao Premier League) and took office as owner">ラオス1部リーグ サバナケットFCの運営権60%を獲得し、オーナーに就任</span>
+        </li>
+        <li>
+          <span class="year">2026</span>
+          <span class="txt" data-ja="サバナケットFCをサバナケットゼロスFCに改名して運営開始" data-en="Renamed Savannakhet FC to Savannakhet Zelos FC and commenced operations">サバナケットFCをサバナケットゼロスFCに改名して運営開始</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="career-section">
+      <h3 class="career-heading">PLAYER CAREER</h3>
+      <ul class="player-career-list">
+        <li data-ja="サワンナケート・ゼロスFC（ラオス）" data-en="Savannakhet Zelos FC (Laos)">サワンナケート・ゼロスFC（ラオス）</li>
+        <li data-ja="サラワンユナイテッド（ラオス）" data-en="Salavan United (Laos)">サラワンユナイテッド（ラオス）</li>
+        <li data-ja="エズラFC（ラオス）" data-en="Ezra FC (Laos)">エズラFC（ラオス）</li>
+        <li data-ja="ビエンチャンFC（ラオス）" data-en="Vientiane FC (Laos)">ビエンチャンFC（ラオス）</li>
+        <li data-ja="サムットプラカンFC（タイ）" data-en="Samut Prakan FC (Thailand)">サムットプラカンFC（タイ）</li>
+        <li data-ja="スリースタークラブ（ネパール）" data-en="Three Star Club (Nepal)">スリースタークラブ（ネパール）</li>
+        <li data-ja="セレンゲプレス・ファルコンズ（モンゴル）" data-en="Selenge Press Falcons (Mongolia)">セレンゲプレス・ファルコンズ（モンゴル）</li>
+        <li data-ja="ゴヨFC（モンゴル）" data-en="Goyo FC (Mongolia)">ゴヨFC（モンゴル）</li>
+        <li data-ja="アスレティック220FC（モンゴル）" data-en="Athletic 220 FC (Mongolia)">アスレティック220FC（モンゴル）</li>
+        <li data-ja="CMAC FC（カンボジア）" data-en="CMAC FC (Cambodia)">CMAC FC（カンボジア）</li>
+        <li data-ja="HBO東京（日本）" data-en="HBO Tokyo (Japan)">HBO東京（日本）</li>
+        <li data-ja="スポルティーバつくば（日本）" data-en="Sportiva Tsukuba (Japan)">スポルティーバつくば（日本）</li>
+        <li data-ja="JAPANサッカーカレッジ（日本）" data-en="JAPAN Soccer College (Japan)">JAPANサッカーカレッジ（日本）</li>
+        <li data-ja="エストゥディアンテス・デ・ラプラタ（アルゼンチン）" data-en="Estudiantes de La Plata (Argentina)">エストゥディアンテス・デ・ラプラタ（アルゼンチン）</li>
+      </ul>
+    </div>
+  </div>
+</div><!-- end page-profile -->
+
+<!-- ==================== SERVICES PAGE ==================== -->
+<div class="page" id="page-services">
+  <div class="generic-inner">
+    <div class="profile-heading fade-in">
+      <div class="kicker">WHAT WE DO</div>
+      <h2>SERVICES</h2>
+      <div class="note" data-ja="事業内容" data-en="Our Services">事業内容</div>
+    </div>
+    <p style="text-align:center; font-size:15px; color:var(--sub); margin-bottom:40px; margin-top:-20px;" data-ja="スポーツに関わるすべての人に、最適なソリューションを提供します。" data-en="Providing optimal solutions for everyone involved in sport.">スポーツに関わるすべての人に、最適なソリューションを提供します。</p>
+  </div>
+  <div class="services-wrap" style="background:transparent; padding-bottom:80px;">
+    <div class="services-inner">
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="num">01</div>
+          <div class="kicker">MANAGEMENT</div>
+          <h3 data-ja="選手マネジメント" data-en="Player Management">選手マネジメント</h3>
+          <p data-ja="選手のキャリア設計から契約交渉、日常のサポートまで。一人ひとりに合わせた最適なプランを提供します。" data-en="From career design and contract negotiation to day-to-day support — customized plans for every athlete.">選手のキャリア設計から契約交渉、日常のサポートまで。一人ひとりに合わせた最適なプランを提供します。</p>
+          <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="num">02</div>
+          <div class="kicker">OVERSEAS</div>
+          <h3 data-ja="海外挑戦サポート" data-en="Overseas Challenge">海外挑戦サポート</h3>
+          <p data-ja="海外クラブとのネットワークを活かし、トライアウトの機会創出や移籍交渉を支援します。東南アジアを中心とした幅広いコネクションが強みです。" data-en="Leveraging our overseas club network to create tryout opportunities and negotiate transfers. Our strength lies in broad connections centered on Southeast Asia.">海外クラブとのネットワークを活かし、トライアウトの機会創出や移籍交渉を支援します。東南アジアを中心とした幅広いコネクションが強みです。</p>
+          <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="num">03</div>
+          <div class="kicker">SPONSORSHIP</div>
+          <h3 data-ja="スポンサーシップ" data-en="Sponsorship">スポンサーシップ</h3>
+          <p data-ja="選手とスポンサー企業のマッチングを行い、双方にとって価値あるパートナーシップを構築します。" data-en="Matching athletes with sponsors to build partnerships that create mutual value.">選手とスポンサー企業のマッチングを行い、双方にとって価値あるパートナーシップを構築します。</p>
+          <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="num">04</div>
+          <div class="kicker">EVENTS</div>
+          <h3 data-ja="イベント企画・運営" data-en="Event Planning & Operations">イベント企画・運営</h3>
+          <p data-ja="トライアウトやスポーツキャンプなど、選手の成長につながるイベントを企画・運営します。" data-en="Planning and operating tryouts, sports camps, and events that drive player growth.">トライアウトやスポーツキャンプなど、選手の成長につながるイベントを企画・運営します。</p>
+          <a class="cta" onclick="showPage('events')">EVENTS →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="num">05</div>
+          <div class="kicker">EDUCATION</div>
+          <h3 data-ja="キャリア教育" data-en="Career Education">キャリア教育</h3>
+          <p data-ja="セカンドキャリアを見据えた教育プログラムや、若手選手向けのメンタリングを提供します。" data-en="Education programs and mentoring for young players, with an eye on second careers.">セカンドキャリアを見据えた教育プログラムや、若手選手向けのメンタリングを提供します。</p>
+          <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="num">06</div>
+          <div class="kicker">CONSULTING</div>
+          <h3 data-ja="コンサルティング" data-en="Consulting">コンサルティング</h3>
+          <p data-ja="クラブや企業向けに、スポーツビジネスに関する戦略立案やアドバイザリーサービスを提供します。" data-en="Strategic planning and advisory services on sports business, for clubs and companies.">クラブや企業向けに、スポーツビジネスに関する戦略立案やアドバイザリーサービスを提供します。</p>
+          <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="num">07</div>
+          <div class="kicker">SOCIAL CONTRIBUTION</div>
+          <h3 data-ja="発展途上国のスポーツ支援" data-en="Sports Support for Developing Nations">発展途上国のスポーツ支援</h3>
+          <p data-ja="スポーツを通じて子どもたちに夢と希望を届ける。現地のニーズに寄り添い、持続的な支援活動を行います。" data-en="Delivering dreams and hope to children through sport — with ongoing support that stays close to local needs.">スポーツを通じて子どもたちに夢と希望を届ける。現地のニーズに寄り添い、持続的な支援活動を行います。</p>
+          <ul class="sub-list">
+            <li data-ja="シューズの寄贈" data-en="Donation of football shoes">シューズの寄贈</li>
+            <li data-ja="AED寄贈" data-en="Donation of AEDs">AED寄贈</li>
+            <li data-ja="サッカー教室開催" data-en="Football clinics">サッカー教室開催</li>
+          </ul>
+          <a class="cta" onclick="showPage('contact')">CONTACT →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- end page-services -->
+
+<!-- ==================== EVENTS PAGE ==================== -->
+<div class="page" id="page-events">
+  <div class="generic-inner">
+    <div class="profile-heading fade-in">
+      <div class="kicker">WHAT'S ON</div>
+      <h2>EVENTS</h2>
+      <div class="note" data-ja="イベント情報" data-en="Upcoming & Past Events">イベント情報</div>
+    </div>
+    <p style="text-align:center; font-size:15px; color:var(--sub); margin-bottom:40px; margin-top:-20px;" data-ja="ZELOSが主催・運営するイベントをご紹介します。" data-en="Events hosted and operated by ZELOS.">ZELOSが主催・運営するイベントをご紹介します。</p>
+  </div>
+  <div class="events-wrap" style="background:transparent; padding-bottom:80px;">
+    <div class="events-inner">
+      <div class="events-grid">
+        <a class="event-card fade-in" href="https://zelos2026.github.io/soccer-tryout-2026/" target="_blank" rel="noopener">
+          <span class="event-status ended">ENDED</span>
+          <div class="event-date-block">
+            <span class="event-date-day">03</span>
+            <span class="event-date-month">APR</span>
+            <span class="event-date-year">2026</span>
+          </div>
+          <h3 data-ja="海外サッカートライアウト 2026" data-en="Overseas Soccer Tryout 2026">海外サッカートライアウト 2026</h3>
+          <p data-ja="海外プロクラブのスカウトが直接選手を評価する、国際トライアウトイベント。詳細はこちら。" data-en="An international tryout event where overseas professional club scouts evaluate players directly. Click for details.">海外プロクラブのスカウトが直接選手を評価する、国際トライアウトイベント。詳細はこちら。</p>
+          <div class="event-meta">
+            <span><span class="m-label">VENUE</span><span data-ja="東京都葛飾区" data-en="Katsushika, Tokyo">東京都葛飾区</span></span>
+            <span><span class="m-label">TARGET</span><span data-ja="18歳〜26歳" data-en="Ages 18–26">18歳〜26歳</span></span>
+          </div>
+        </a>
+      </div>
+      <p style="text-align:center; font-size:13px; color:var(--sub); margin-top:40px;" data-ja="新しいイベント情報は随時更新します。お問い合わせもお気軽にどうぞ。" data-en="New event information will be updated regularly. Please feel free to contact us.">新しいイベント情報は随時更新します。お問い合わせもお気軽にどうぞ。</p>
+    </div>
+  </div>
+</div><!-- end page-events -->
+
+<!-- ==================== ACHIEVEMENTS PAGE ==================== -->
+<div class="page" id="page-achievements">
+  <div class="achievements-inner">
+    <div class="profile-heading fade-in">
+      <div class="kicker">TRACK RECORD</div>
+      <h2>ACHIEVEMENTS</h2>
+      <div class="note" data-ja="活動実績" data-en="Our Track Record">活動実績</div>
+    </div>
+
+    <div class="achievements-grid">
+      <div class="achievement-card fade-in">
+        <h3 data-ja="Savannakhet Zelos FC 運営権取得・クラブ経営" data-en="Savannakhet Zelos FC — Operating Rights & Club Management">Savannakhet Zelos FC 運営権取得・クラブ経営</h3>
+        <p data-ja="ラオスプレミアリーグ所属Savannakhet FCの運営権60%を取得し、「Savannakhet Zelos FC」として再始動。クラブ経営・ブランディング・選手獲得を主導し、ラオスサッカーの発展に取り組んでいる。" data-en="Acquired 60% of the operating rights for Savannakhet FC of the Lao Premier League, relaunching as &quot;Savannakhet Zelos FC&quot;. Leading club management, branding, and player acquisition to contribute to the development of Lao football.">ラオスプレミアリーグ所属Savannakhet FCの運営権60%を取得し、「Savannakhet Zelos FC」として再始動。クラブ経営・ブランディング・選手獲得を主導し、ラオスサッカーの発展に取り組んでいる。</p>
+      </div>
+      <div class="achievement-card fade-in">
+        <h3 data-ja="海外サッカートライアウト開催" data-en="Overseas Soccer Tryout Events">海外サッカートライアウト開催</h3>
+        <p data-ja="東南アジアのプロクラブスカウトを招聘し、国内選手の海外挑戦を直接サポートするトライアウトを企画・実施。" data-en="Inviting scouts from Southeast Asian professional clubs and organizing tryouts that directly support domestic players' overseas challenges.">東南アジアのプロクラブスカウトを招聘し、国内選手の海外挑戦を直接サポートするトライアウトを企画・実施。</p>
+      </div>
+      <div class="achievement-card fade-in">
+        <h3 data-ja="ラオスでのサッカー普及活動" data-en="Football Promotion in Laos">ラオスでのサッカー普及活動</h3>
+        <p data-ja="ラオス現地でのサッカー指導を通じて、東南アジアのスポーツ発展に貢献。現地クラブとの関係構築を実現。" data-en="Contributing to sports development in Southeast Asia through on-the-ground football coaching in Laos, and building relationships with local clubs.">ラオス現地でのサッカー指導を通じて、東南アジアのスポーツ発展に貢献。現地クラブとの関係構築を実現。</p>
+      </div>
+      <div class="achievement-card fade-in">
+        <h3 data-ja="選手マネジメント・移籍サポート" data-en="Player Management & Transfer Support">選手マネジメント・移籍サポート</h3>
+        <p data-ja="東南アジアを中心とした国際的なネットワークを活かし、日本人選手の海外移籍・契約交渉をサポート。" data-en="Utilizing our international network centered on Southeast Asia to support overseas transfers and contract negotiations for Japanese players.">東南アジアを中心とした国際的なネットワークを活かし、日本人選手の海外移籍・契約交渉をサポート。</p>
+      </div>
+    </div>
+
+    <div class="achievement-note" data-ja="活動実績は随時更新していきます。" data-en="Our track record will be updated regularly.">活動実績は随時更新していきます。</div>
+  </div>
+</div><!-- end page-achievements -->
+
+<!-- ==================== SOCIAL CONTRIBUTION PAGE ==================== -->
+<div class="page" id="page-social">
+  <div class="social-inner">
+    <div class="profile-heading fade-in">
+      <div class="kicker">SOCIAL CONTRIBUTION</div>
+      <h2>SOCIAL</h2>
+      <div class="note" data-ja="社会貢献活動" data-en="Our Social Contribution">社会貢献活動</div>
+    </div>
+
+    <p class="social-intro fade-in" data-ja="ZELOSは、スポーツを通して誰しもが挑戦できる社会を目指しています。世界各地の子どもたちや選手たちに向けて、これまで行ってきた支援活動の一部をご紹介します。" data-en="ZELOS works toward a society where anyone can take on a challenge through sport. Here are some of the support activities we've carried out for children and athletes around the world.">ZELOSは、スポーツを通して誰しもが挑戦できる社会を目指しています。世界各地の子どもたちや選手たちに向けて、これまで行ってきた支援活動の一部をご紹介します。</p>
+
+    <!-- Article 1: Mongolia U16 Women 2019 -->
+    <article class="social-article fade-in">
+      <div class="social-article-cover">
+        <span class="social-article-badge" data-ja="シューズ寄贈" data-en="SHOES DONATION">シューズ寄贈</span>
+        <img src="images/social/mongolia-2019-02.jpg" alt="モンゴル16歳以下女子代表チームへのスパイク寄贈">
+      </div>
+      <div class="social-article-body">
+        <div class="social-article-meta">
+          <span class="meta-item"><span class="m-label">DATE</span><span class="m-value">2019</span></span>
+          <span class="meta-item"><span class="m-label">LOCATION</span><span class="m-value" data-ja="モンゴル / ウランバートル" data-en="Ulaanbaatar, Mongolia">モンゴル / ウランバートル</span></span>
+          <span class="meta-item"><span class="m-label">TARGET</span><span class="m-value" data-ja="モンゴル U-16 女子代表" data-en="Mongolia U-16 Women's National Team">モンゴル U-16 女子代表</span></span>
+        </div>
+        <h3 data-ja="モンゴル16歳以下女子代表チーム スパイク寄贈" data-en="Mongolia U-16 Women's National Team — Football Boots Donation">モンゴル16歳以下女子代表チーム スパイク寄贈</h3>
+        <p data-ja="モンゴル代表として練習に励む16歳以下女子チームの選手全員に、モリヤマスポーツ様のご協力を得てスパイクの寄贈を行いました。" data-en="With the generous support of Moriyama Sports, we donated football boots to all members of the Mongolia U-16 Women's National Team, who train hard every day representing their country.">モンゴル代表として練習に励む16歳以下女子チームの選手全員に、モリヤマスポーツ様のご協力を得てスパイクの寄贈を行いました。</p>
+        <p data-ja="慣れない環境でも真摯に練習に取り組む選手たちの姿から、スポーツが持つ力を改めて実感した活動となりました。ウランバートルでの寄贈式には、代表チームの全選手・スタッフが参加し、新しいスパイクを手にする選手たちの笑顔が印象的な一日となりました。" data-en="Watching these athletes train with sincerity in unfamiliar conditions was a powerful reminder of what sport can give. At the handover ceremony in Ulaanbaatar, every player and staff member of the national team joined us — and the smiles of players receiving their new boots made it a truly memorable day.">慣れない環境でも真摯に練習に取り組む選手たちの姿から、スポーツが持つ力を改めて実感した活動となりました。ウランバートルでの寄贈式には、代表チームの全選手・スタッフが参加し、新しいスパイクを手にする選手たちの笑顔が印象的な一日となりました。</p>
+
+        <div class="social-article-partner">
+          <span class="p-label">PARTNER</span>
+          <span data-ja="モリヤマスポーツ様のご協力のもと実施しました。" data-en="Made possible with the support of Moriyama Sports.">モリヤマスポーツ様のご協力のもと実施しました。</span>
+        </div>
+
+        <div class="social-article-gallery">
+          <div class="g-item"><img src="images/social/mongolia-2019-01.jpg" alt=""></div>
+          <div class="g-item"><img src="images/social/mongolia-2019-02.jpg" alt=""></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Article 2: Mongolia Women's National Team — Training Shoes 2019 -->
+    <article class="social-article fade-in">
+      <div class="social-article-cover">
+        <span class="social-article-badge" data-ja="シューズ寄贈" data-en="SHOES DONATION">シューズ寄贈</span>
+        <img src="images/social/mongolia-2019-02-01.jpg" alt="モンゴル代表女子チームへのトレーニングシューズ寄贈">
+      </div>
+      <div class="social-article-body">
+        <div class="social-article-meta">
+          <span class="meta-item"><span class="m-label">DATE</span><span class="m-value">2019</span></span>
+          <span class="meta-item"><span class="m-label">LOCATION</span><span class="m-value" data-ja="モンゴル / ウランバートル" data-en="Ulaanbaatar, Mongolia">モンゴル / ウランバートル</span></span>
+          <span class="meta-item"><span class="m-label">TARGET</span><span class="m-value" data-ja="モンゴル女子代表チーム" data-en="Mongolia Women's National Team">モンゴル女子代表チーム</span></span>
+        </div>
+        <h3 data-ja="モンゴル代表女子チーム トレーニングシューズ寄贈" data-en="Mongolia Women's National Team — Training Shoes Donation">モンゴル代表女子チーム トレーニングシューズ寄贈</h3>
+        <p data-ja="モンゴル代表として活躍する女子選手たちへ、人工芝でのトレーニングにも最適なシューズを、モリヤマスポーツ様のご協力を得て寄贈いたしました。" data-en="We donated training shoes optimized for artificial turf to the athletes of the Mongolia Women's National Team, made possible by the generous support of Moriyama Sports.">モンゴル代表として活躍する女子選手たちへ、人工芝でのトレーニングにも最適なシューズを、モリヤマスポーツ様のご協力を得て寄贈いたしました。</p>
+        <p data-ja="練習用シューズの不足は、長期的なコンディショニングや怪我のリスクにも影響する大きな課題です。今回、用途に適したトレーニングシューズをチームへお届けできたことで、選手たちが安心して日々のトレーニングに集中できる環境づくりに少しでも貢献できたことを嬉しく思います。" data-en="A shortage of proper training shoes directly affects long-term conditioning and injury risk for athletes. By delivering shoes suited to their daily practice environment, we are glad to have contributed — even in a small way — to letting these players focus on their training with confidence.">練習用シューズの不足は、長期的なコンディショニングや怪我のリスクにも影響する大きな課題です。今回、用途に適したトレーニングシューズをチームへお届けできたことで、選手たちが安心して日々のトレーニングに集中できる環境づくりに少しでも貢献できたことを嬉しく思います。</p>
+
+        <div class="social-article-partner">
+          <span class="p-label">PARTNER</span>
+          <span data-ja="モリヤマスポーツ様のご協力のもと実施しました。" data-en="Made possible with the support of Moriyama Sports.">モリヤマスポーツ様のご協力のもと実施しました。</span>
+        </div>
+
+        <div class="social-article-gallery">
+          <div class="g-item"><img src="images/social/mongolia-2019-02-02.jpg" alt=""></div>
+          <div class="g-item"><img src="images/social/mongolia-2019-02-03.jpg" alt=""></div>
+          <div class="g-item"><img src="images/social/mongolia-2019-02-04.jpg" alt=""></div>
+          <div class="g-item"><img src="images/social/mongolia-2019-02-05.jpg" alt=""></div>
+          <div class="g-item"><img src="images/social/mongolia-2019-02-06.jpg" alt=""></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Article 3: Mongolia Men's National Team — WC Qualifier 2019 -->
+    <article class="social-article fade-in">
+      <div class="social-article-cover">
+        <span class="social-article-badge" data-ja="シューズ寄贈" data-en="SHOES DONATION">シューズ寄贈</span>
+        <img src="images/social/mongolia-wc-2019-01.jpg" alt="モンゴル男子代表チームへのシューズ寄贈 / 埼玉スタジアム">
+      </div>
+      <div class="social-article-body">
+        <div class="social-article-meta">
+          <span class="meta-item"><span class="m-label">DATE</span><span class="m-value">2019</span></span>
+          <span class="meta-item"><span class="m-label">LOCATION</span><span class="m-value" data-ja="日本 / 埼玉スタジアム" data-en="Saitama Stadium, Japan">日本 / 埼玉スタジアム</span></span>
+          <span class="meta-item"><span class="m-label">TARGET</span><span class="m-value" data-ja="モンゴル男子代表チーム" data-en="Mongolia Men's National Team">モンゴル男子代表チーム</span></span>
+        </div>
+        <h3 data-ja="W杯アジア予選に出場するモンゴル男子代表チームへシューズ寄贈" data-en="Shoes Donation to the Mongolia Men's National Team at the FIFA World Cup Asian Qualifier">W杯アジア予選に出場するモンゴル男子代表チームへシューズ寄贈</h3>
+        <p data-ja="日本代表とのW杯予選を戦うモンゴル代表チームの選手・スタッフ全員に対して、モリヤマスポーツ様のご協力のもと、アシックス製のシューズを提供しました。" data-en="With the generous support of Moriyama Sports, we provided ASICS football shoes to every player and staff member of the Mongolia National Team as they prepared to face Japan in the FIFA World Cup qualifier.">日本代表とのW杯予選を戦うモンゴル代表チームの選手・スタッフ全員に対して、モリヤマスポーツ様のご協力のもと、アシックス製のシューズを提供しました。</p>
+        <p data-ja="試合直前の埼玉スタジアムのロッカールームでの寄贈となり、新しいシューズを手にした選手たちの真剣な表情が印象的でした。アジアのトップレベルの舞台で戦うモンゴル代表が、最高の状態でピッチに立てるよう、日本からの支援を通じてエールを届けることができた活動です。" data-en="The handover took place in the locker room at Saitama Stadium just before the match, and the serious, focused looks on the players' faces as they received their new shoes left a strong impression. Through this support from Japan, we were able to send our encouragement to the Mongolia team as they prepared to compete at the highest level in Asia.">試合直前の埼玉スタジアムのロッカールームでの寄贈となり、新しいシューズを手にした選手たちの真剣な表情が印象的でした。アジアのトップレベルの舞台で戦うモンゴル代表が、最高の状態でピッチに立てるよう、日本からの支援を通じてエールを届けることができた活動です。</p>
+
+        <div class="social-article-partner">
+          <span class="p-label">PARTNER</span>
+          <span data-ja="モリヤマスポーツ様のご協力のもと、アシックス様のシューズを提供いたしました。" data-en="Made possible with the support of Moriyama Sports, using ASICS footwear.">モリヤマスポーツ様のご協力のもと、アシックス様のシューズを提供いたしました。</span>
+        </div>
+
+        <div class="social-article-links">
+          <span class="l-label" data-ja="関連記事" data-en="RELATED ARTICLES">関連記事</span>
+          <ul>
+            <li><a href="https://sportiva.shueisha.co.jp/clm/football/jfootball/2019/10/15/___split_95/" target="_blank" rel="noopener">Sportiva（集英社）</a></li>
+            <li><a href="https://king-gear.com/articles/1142" target="_blank" rel="noopener">KING GEAR</a></li>
+            <li><a href="http://blog.livedoor.jp/koheisblog/archives/10126328.html" target="_blank" rel="noopener">関連ブログレポート</a></li>
+          </ul>
+        </div>
+
+        <div class="social-article-gallery">
+          <div class="g-item"><img src="images/social/mongolia-wc-2019-02.jpg" alt=""></div>
+          <div class="g-item"><img src="images/social/mongolia-wc-2019-03.jpg" alt=""></div>
+          <div class="g-item"><img src="images/social/mongolia-wc-2019-04.jpg" alt=""></div>
+        </div>
+      </div>
+    </article>
+
+    <p class="achievement-note" data-ja="今後も、現地のニーズに寄り添った支援活動を継続していきます。" data-en="We will continue our support activities in close partnership with local communities.">今後も、現地のニーズに寄り添った支援活動を継続していきます。</p>
+  </div>
+</div><!-- end page-social -->
+
+<!-- ==================== CONTACT PAGE ==================== -->
+<div class="page" id="page-contact">
+  <div class="generic-inner">
+    <div class="profile-heading fade-in">
+      <div class="kicker">GET IN TOUCH</div>
+      <h2>CONTACT</h2>
+      <div class="note" data-ja="お問い合わせ" data-en="Contact Us">お問い合わせ</div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 data-ja="まずはお気軽にご連絡ください" data-en="Feel free to reach out">まずはお気軽にご連絡ください</h3>
+        <p data-ja="選手マネジメント、イベントへの参加、スポンサーシップなど、スポーツに関するあらゆるご相談に対応いたします。お気軽にメッセージをお送りください。" data-en="We can support any sport-related inquiry — player management, event participation, sponsorship, and more. Feel free to send us a message.">選手マネジメント、イベントへの参加、スポンサーシップなど、スポーツに関するあらゆるご相談に対応いたします。お気軽にメッセージをお送りください。</p>
+
+        <div class="contact-item">
+          <div class="label">EMAIL</div>
+          <div class="val"><a href="mailto:zelos.sm@gmail.com">zelos.sm@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="label">ADDRESS</div>
+          <div class="val" data-ja="東京都新宿区高田馬場4-40-18-801" data-en="4-40-18-801 Takadanobaba, Shinjuku-ku, Tokyo">東京都新宿区高田馬場4-40-18-801</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">NETWORK</div>
+          <div class="val" data-ja="日本 / ラオス / タイ ほか" data-en="Japan / Laos / Thailand and more">日本 / ラオス / タイ ほか</div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="handleContactSubmit(event)">
+        <div>
+          <label data-ja="お名前" data-en="Name">お名前<span class="req">*</span></label>
+          <input type="text" name="name" required>
+        </div>
+        <div>
+          <label data-ja="メールアドレス" data-en="Email">メールアドレス<span class="req">*</span></label>
+          <input type="email" name="email" required>
+        </div>
+        <div>
+          <label data-ja="電話番号" data-en="Phone">電話番号</label>
+          <input type="tel" name="phone">
+        </div>
+        <div>
+          <label data-ja="お問い合わせ種別" data-en="Inquiry Type">お問い合わせ種別</label>
+          <select name="type">
+            <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+            <option value="management" data-ja="選手マネジメントについて" data-en="Player Management">選手マネジメントについて</option>
+            <option value="event" data-ja="イベントについて" data-en="Events">イベントについて</option>
+            <option value="sponsor" data-ja="スポンサーシップについて" data-en="Sponsorship">スポンサーシップについて</option>
+            <option value="media" data-ja="取材・メディア関連" data-en="Media / Press">取材・メディア関連</option>
+            <option value="other" data-ja="その他" data-en="Other">その他</option>
+          </select>
+        </div>
+        <div>
+          <label data-ja="お問い合わせ内容" data-en="Message">お問い合わせ内容<span class="req">*</span></label>
+          <textarea name="message" required></textarea>
+        </div>
+        <button type="submit" data-ja="送信する" data-en="SEND MESSAGE">送信する</button>
+      </form>
+    </div>
+  </div>
+</div><!-- end page-contact -->
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="name">ZELOS</div>
+        <div class="sub" data-ja="SPORTS MANAGEMENT" data-en="SPORTS MANAGEMENT">SPORTS MANAGEMENT</div>
+        <div class="addr" data-ja="一般社団法人ZELOS<br>東京都新宿区高田馬場4-40-18-801" data-en="ZELOS Association<br>4-40-18-801 Takadanobaba,<br>Shinjuku-ku,<br>Tokyo, Japan">一般社団法人ZELOS<br>東京都新宿区高田馬場4-40-18-801</div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>ABOUT</h4>
+          <ul>
+            <li onclick="showPage('about')" data-ja="会社概要" data-en="About">会社概要</li>
+            <li onclick="showPage('profile')" data-ja="代表プロフィール" data-en="Profile">代表プロフィール</li>
+            <li onclick="showPage('achievements')" data-ja="活動実績" data-en="Achievements">活動実績</li>
+            <li onclick="showPage('social')" data-ja="社会貢献活動" data-en="Social Contribution">社会貢献活動</li>
+          </ul>
+        </div>
+        <div>
+          <h4>SERVICES</h4>
+          <ul>
+            <li onclick="showPage('services')" data-ja="事業内容" data-en="Services">事業内容</li>
+            <li onclick="showPage('events')" data-ja="イベント" data-en="Events">イベント</li>
+            <li onclick="showPage('contact')" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</li>
+          </ul>
+        </div>
+        <div>
+          <h4>CONTACT</h4>
+          <ul>
+            <li onclick="window.location.href='mailto:zelos.sm@gmail.com'">zelos.sm@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:zelos.sm@gmail.com">Email</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">X (Twitter)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2022 ZELOS. All Rights Reserved.</div>
+      <div>ZELOS / Sports Management / Tokyo</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============ PAGE SWITCHER ============
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + pageId);
+  if (target) target.classList.add('active');
+
+  // Update nav active state
+  document.querySelectorAll('nav.main-nav li:not(.lang) a').forEach(a => a.classList.remove('active'));
+  const navMap = {home:0, about:1, profile:2, services:3, events:4, achievements:5, social:6, contact:7};
+  const navItems = document.querySelectorAll('nav.main-nav li:not(.lang) a');
+  if (navMap[pageId] !== undefined && navItems[navMap[pageId]]) {
+    navItems[navMap[pageId]].classList.add('active');
+  }
+
+  // Scroll to top
+  window.scrollTo({top: 0, behavior: 'smooth'});
+
+  // Re-trigger fade-in on newly-shown page content
+  setTimeout(() => {
+    target && target.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+  }, 50);
+}
+
+// ============ FADE-IN ON SCROLL ============
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ============ LANGUAGE TOGGLE ============
+let currentLang = 'ja';
+
+function toggleLang() {
+  currentLang = (currentLang === 'ja') ? 'en' : 'ja';
+  applyLang(currentLang);
+}
+
+function applyLang(lang) {
+  // Update html lang attribute
+  document.getElementById('htmlRoot').setAttribute('lang', lang);
+
+  // Update all elements with data-ja / data-en attributes
+  document.querySelectorAll('[data-ja][data-en]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text !== null) {
+      // Handle <br> tags inside text
+      if (text.includes('<br>') || text.includes('<em>')) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    }
+  });
+
+  // Toggle the lang button label itself
+  const toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.textContent = (lang === 'ja') ? 'ENGLISH' : '日本語';
+  }
+}
+
+// ============ CONTACT FORM (basic mailto fallback) ============
+function handleContactSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  const name = data.get('name') || '';
+  const email = data.get('email') || '';
+  const phone = data.get('phone') || '';
+  const type = data.get('type') || '';
+  const message = data.get('message') || '';
+
+  const subject = encodeURIComponent('[ZELOS お問い合わせ] ' + (type || '') + ' / ' + name);
+  const body = encodeURIComponent(
+    'お名前: ' + name + '\n' +
+    'メール: ' + email + '\n' +
+    '電話番号: ' + phone + '\n' +
+    '種別: ' + type + '\n\n' +
+    '内容:\n' + message
+  );
+  window.location.href = 'mailto:zelos.sm@gmail.com?subject=' + subject + '&body=' + body;
+}
+</script>
+
+</body>
+</html>
